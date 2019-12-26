@@ -44,7 +44,7 @@ function calc(a, b, c) {
   if (a === undefined || b === undefined || c === undefined) {
     return "Preencha todos os valores corretamente!";
   } else {
-    return (a + b) * c;
+    return (a * b * c) + 2;
   }
 }
 
@@ -69,8 +69,27 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
-
+function calculos(a, b, c) {
+  if (!a && !b && !c) {
+    return false;
+  } else if (a && !b && !c) {
+    return a;
+  } else if (a && b && !c) {
+    return a + b;
+  } else if (a && b && c) {
+    return (a + b) / c;
+  } else {
+    return 'null';
+  }
+}
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-?
+calculos();
+//false
+calculos(1);
+//1
+calculos(1, 3);
+//4
+calculos(1, 3, 2);
+//2
 ```
