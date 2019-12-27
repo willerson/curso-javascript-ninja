@@ -28,7 +28,6 @@ function addValor() {
  }
 
 // Invoque a função criada acima.
-
 addVAlor();
 
 // Qual o retorno da função? (Use comentários de bloco).
