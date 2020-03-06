@@ -111,7 +111,33 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
 citado acima, no lugar de "pessoas".
 */
-?
+carro.addPessoas = function(numPessoa) {
+
+    if (numPessoa < 0) {
+      carro.quantidadeDePessoas -= numPessoa;
+      let totalPessoas = carro.assentos - carro.quantidadeDePessoas;
+      if (totalPessoas < 2) {
+        return `Só cabem mais ${totalPessoas} pessoa!`;
+      } else {
+        return `Só cabem mais ${totalPessoas} pessoas!`;
+      }
+    } else if (carro.quantidadeDePessoas === carro.assentos) {
+      return "O carro já está lotado!";
+    } else if (carro.quantidadeDePessoas + numPessoa < carro.assentos) {
+      carro.quantidadeDePessoas += numPessoa;
+      return `Já temos ${carro.quantidadeDePessoas} pessoas no carro!`   
+    } else if (carro.quantidadeDePessoas + numPessoa > carro.assentos) {
+      let totalPessoas = carro.assentos - carro.quantidadeDePessoas;
+      if (totalPessoas < 2) {
+        return `Só cabem mais ${totalPessoas} pessoa!`;
+      } else {
+      return `Só cabem mais ${totalPessoas} pessoas!`;
+    } else if (carro.quantidadeDePessoas + numPessoa === carro.assentos) {
+    carro.quantidadeDePessoas += numPessoa;
+    return "O carro já está lotado!";
+    } 
+  
+}
 
 /*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
@@ -121,31 +147,38 @@ retornar algum valor.
 
 Qual a cor atual do carro?
 */
-?
+carro.obterCor();
+//"Prata"
 
 // Mude a cor do carro para vermelho.
-?
+carro.mudarCor('Vermelho');
 
 // E agora, qual a cor do carro?
-?
+carro.obterCor();
+//"Vermelho"
 
 // Mude a cor do carro para verde musgo.
-?
+carro.mudarCor('Verde Musgo');
 
 // E agora, qual a cor do carro?
-?
+carro.obterCor();
+//"Verde Musgo"
 
 // Qual a marca e modelo do carro?
-?
+carro.obterMarcaModelo();
+//"Este carro é um Volkswagen Fox"
 
 // Adicione 2 pessoas no carro.
-?
+carro.addPessoas(2);
+//"Já temos 2 pessoas no carro!"
 
 // Adicione mais 4 pessoas no carro.
-?
+carro.addPessoas(4);
+//"Só cabem mais 3 pessoas!"
 
 // Faça o carro encher.
-?
+carro.addPessoas(3);
+//"O carro já está lotado!"
 
 // Tire 4 pessoas do carro.
 ?
