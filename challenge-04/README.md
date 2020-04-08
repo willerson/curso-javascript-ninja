@@ -115,6 +115,7 @@ carro.addPessoas = function(numPessoa) {
 
     if (numPessoa < 0) {
        carro.quantidadeDePessoas = numPessoa + carro.quantidadeDePessoas;
+       console.log(carro.quantidadeDePessoas)
       let totalPessoas = carro.assentos - carro.quantidadeDePessoas;
       if (totalPessoas < 2) {
         return `Só cabem mais ${totalPessoas} pessoa!`;
@@ -182,11 +183,14 @@ carro.addPessoas(3);
 //"O carro já está lotado!"
 
 // Tire 4 pessoas do carro.
-?
+carro.addPessoas(-4);
+//"Só cabem mais 4 pessoas!"
 
 // Adicione 10 pessoas no carro.
-?
+carro.addPessoas(10);
+//"Só cabem mais 4 pessoas!"
 
 // Quantas pessoas temos no carro?
-?
+carro.quantidadeDePessoas
+//1
 ```
