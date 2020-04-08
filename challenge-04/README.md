@@ -135,7 +135,7 @@ carro.addPessoas = function(numPessoa) {
       return `Só cabem mais ${totalPessoas} pessoas!`;
       }
     } else if (carro.quantidadeDePessoas + numPessoa === carro.assentos) {
-    carro.quantidadeDePessoas += numPessoa;
+    carro.quantidadeDePessoas += numPessoa
     return "O carro já está lotado!";
     } 
   
