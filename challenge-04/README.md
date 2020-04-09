@@ -142,6 +142,25 @@ carro.addPessoas = function(numPessoa) {
 }
 
 /*
+Respondido Daciuk
+carro.adicionarPessoas = function( numeroPessoas ) {
+  var totalPessoas = carro.quantidadePessoas + numeroPessoas;
+  if( carro.quantidadePessoas === carro.assentos && totalPessoas >= carro.assentos) {
+    return 'O carro já está lotado!';
+  }
+  
+  if ( totalPessoas > carro.assentos ) {
+    var quantasPessoasCabem = carro.assentos - carro.quantidadePessoas;
+    var pluralOuSingular = quantasPessoasCabem === 1 ? pluralOuSingular + '!';
+    return 'Só cabem mais ' + quantasPessoasCabem + pluralOuSingular + '!';
+  }
+  
+  carro.quantidadePessoas += numeroPessoas;
+  return 'Já temos ' + carro.quantidadePessoas + ' pessoas no carro!';
+};
+*/
+
+/*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
 utilize sempre o formato de invocação do método (ou chamada da propriedade),
 adicionando comentários _inline_ ao lado com o valor retornado, se o método
